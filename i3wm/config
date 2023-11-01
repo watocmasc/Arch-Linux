@@ -51,7 +51,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec alacritty
-exec --no-startup-id alacritty
+
 
 #no border title
 default_border pixel
@@ -71,7 +71,16 @@ exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
 #nitrogen background
 exec --no-startup-id nitrogen --restore; sleep 1; comptom -b
 
-gaps inner 5
+#border of window
+for_window [class="^.*"] border pixel 1
+
+#margins between windows
+gaps inner 10
+
+# Window color settings
+    # class                 border  backgr. text    indicator
+    client.focused          #00FF00 #FFD700 #ffffff #81a1c1
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -218,9 +227,6 @@ exec --no-startup-id brightnessctl set 100%
 #screenshot
 bindsym $mod+p exec coreshot
 
-#corectrl 
-exec --no-startup-id sudo corectrl
-
 #sublime text
 bindsym $mod+shift+s exec subl
 
@@ -228,3 +234,16 @@ bindsym $mod+shift+s exec subl
 exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --pos 0x0
 exec --no-startup-id xrandr --output HDMI-2 --mode 1920x1080 --pos 1920x0
 exec --no-startup-id ~/screen_scripts.sh
+
+##################################
+######autostart of programs#######
+##################################
+
+#corectrl for performence 
+exec --no-startup-id sudo corectrl
+
+#browser
+exec --no-startup-id google-chrome
+
+#terminal
+exec --no-startup-id alacritty
