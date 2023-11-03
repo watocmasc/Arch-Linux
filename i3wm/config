@@ -232,9 +232,11 @@ bindsym $mod+shift+s exec subl
 #monitors' settings
 exec --no-startup-id ~/screen_scripts.sh
 
+
 ##################################
 ######autostart of programs#######
 ##################################
+
 
 #corectrl for performence 
 exec --no-startup-id sudo corectrl
