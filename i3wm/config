@@ -70,14 +70,14 @@ exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
 exec --no-startup-id nitrogen --restore; sleep 1; comptom -b
 
 #border of window
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 2
 
 #margins between windows
 gaps inner 10
 
 # Window color settings
     # class                 border  backgr. text    indicator
-    client.focused          #00FF00 #FFD700 #ffffff #81a1c1
+    client.focused          #00FF00 #191970 #ffffff #81a1c1
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
