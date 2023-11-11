@@ -35,8 +35,8 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
@@ -70,14 +70,14 @@ exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
 exec --no-startup-id nitrogen --restore; sleep 1; comptom -b
 
 #border of window
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 4
 
 #margins between windows
 gaps inner 10
 
 # Window color settings
     # class                 border  backgr. text    indicator
-    client.focused          #00FF00 #191970 #ffffff #81a1c1
+    client.focused          #00FF00 #3074e3 #ffffff #81a1c1
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
