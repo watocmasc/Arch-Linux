@@ -62,13 +62,13 @@ bindsym $mod+q kill
 bindsym $mod+d exec --no-startup-id rofi -theme glue_pro_blue -font "hack 10" -show run
 
 #chrome bindsym
-bindsym XF86HomePage exec google-chrome-stable
+bindsym XF86HomePage exec thorium-browser
 
 #setxkbmap keyboard
 exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
 
 #nitrogen background
-exec --no-startup-id nitrogen --restore; sleep 1; comptom -b
+#exec --no-startup-id nitrogen --restore; sleep 1; comptom -b
 
 #border of window
 for_window [class="^.*"] border pixel 4
@@ -233,6 +233,7 @@ bindsym $mod+shift+s exec sudo subl
 
 #monitors' settings
 exec --no-startup-id ~/screen_scripts.sh
+exec --no-startup-id xrdb -merge ~/.Xresources
 
 bindsym ctrl+shift+o exec okular
 
@@ -248,7 +249,11 @@ bindsym $mod+shift+t exec telegram-desktop
 exec --no-startup-id sudo corectrl
 
 #browser
-exec --no-startup-id google-chrome-stable
+exec --no-startup-id thorium-browser
 
 #terminal
 exec --no-startup-id alacritty
+
+exec --no-startup-id sh wallpaper.sh
+
+exec --no-startup-id copyq
